@@ -86,6 +86,7 @@ let svg = d3.select("#bubblechart")
         .text("GDP per Capita (int. dollars)")
         .style("font-size", 12);
 
+// DRAW BUBBLES //
 
     // bubble color: maps each continent to a color
     let continentColor = new Map([["Asia", "red"], ["Europe", "orange"], ["North America", "purple"], ["South America", "green"], ["Africa", "blue"], ["Oceania", "brown"]])
@@ -94,8 +95,6 @@ let svg = d3.select("#bubblechart")
     let z = d3.scaleSqrt()
         .domain([1, 122]) //122 is the max in the table
         .range([2 , 26]); //took (domain / 5) + 2
-
-// DRAW BUBBLES //
 
 svg.append('g')
     .selectAll("dot")
