@@ -1,0 +1,32 @@
+<!--Sean Klein 5575709-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='base.css') }}" >
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='bubblechart.css') }}" >
+    <script src="https://d3js.org/d3.v6.min.js" charset="utf-8"></script>
+    <title>Bubble Chart</title>
+</head>
+<body>
+    <!-- https://www.w3schools.com/howto/howto_css_fixed_menu.asp -->
+    <!--https://stackoverflow.com/questions/6791238/send-post-request-on-click-of-href-in-jsp-->
+    <div class="navbar">
+
+            <a href="{{ url_for('bubblechart') }}">Bubble Chart</a>
+            <a href="{{ url_for('sources') }}">Sources</a>
+
+    </div>
+
+    <!-- div for the plot -->
+    <div class="element" id="bubblechart"></div>
+
+    <!-- div for additional info -->
+    <div class="element" id="impressumDiv"></div>
+
+    <!-- between block and endblock we will insert more html, js from other files -->
+    {% block content %}
+    <p><em>Choose on one of the pages above!</em></p>
+    {% endblock %}
+</body>
+</html>

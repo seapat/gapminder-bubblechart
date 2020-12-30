@@ -1,0 +1,27 @@
+<!--Sean Klein 5575709-->
+
+
+{% extends "base.html" %}
+{% block content %}
+
+<!--div element thatcontains the tooltip-->
+<div id="graph">
+    <div id="tooltip"> </div>
+</div>
+
+<!--data from server-->
+<script type="text/javascript" >
+    dataset = {{ data | safe }};
+</script>
+
+<!-- load visualisation-->
+<script src="{{ url_for('static', filename='bubblechart.js') }}"></script>
+
+<!-- some simple explanations about interactivty below the chart-->
+<p>
+    <li>Hover a bubble for more Information!</li>
+    <li>Click on a chart bubble, legend bubble or legend label to filter by continent! Click again to undo!</li>
+</p>
+
+
+{% endblock %}

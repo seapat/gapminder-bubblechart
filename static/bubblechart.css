@@ -1,0 +1,21 @@
+/* Sean Klein 5575709  */
+.bubbles {
+    stroke-width: 1px;
+    stroke: black;
+    opacity: .7
+}
+
+.grid line {
+  stroke: #ddd;
+  stroke-dasharray: 5, 5;
+}
+
+.tooltip {
+  position: fixed;
+  background-color: black;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  opacity: .8;
+  font: 12pt sans-serif;
+}
